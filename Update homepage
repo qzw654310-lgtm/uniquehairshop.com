@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNIQUE Hair Shop</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f8f8f8;
+color:#333;
+}
+
+header{
+background:#111;
+padding:20px;
+text-align:center;
+}
+
+header img{
+width:120px;
+border-radius:50%;
+}
+
+header h1{
+color:white;
+margin-top:15px;
+font-size:35px;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(135deg,#f8d7da,#ffffff);
+}
+
+.hero h2{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+background:#000;
+color:#fff;
+padding:15px 35px;
+text-decoration:none;
+border-radius:30px;
+font-size:18px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#444;
+}
+
+.products{
+padding:50px 20px;
+text-align:center;
+}
+
+.products h2{
+margin-bottom:30px;
+}
+
+.card{
+background:white;
+width:300px;
+margin:auto;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,.1);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+}
+
+.card h3{
+margin:15px;
+}
+
+.price{
+font-size:22px;
+color:#d81b60;
+margin-bottom:15px;
+}
+
+.order{
+display:inline-block;
+margin-bottom:20px;
+background:#25D366;
+color:white;
+padding:12px 25px;
+border-radius:25px;
+text-decoration:none;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<img src="1544.jpg" alt="Logo">
+
+<h1>UNIQUE Hair Shop</h1>
+
+</header>
+
+<section class="hero">
+
+<h2>Welcome to UNIQUE</h2>
+
+<p>Luxury Hair Products</p>
+
+<a class="btn" href="#products">Shop Now</a>
+
+</section>
+
+<section class="products" id="products">
+
+<h2>Featured Product</h2>
+
+<div class="card">
+
+<img src="https://via.placeholder.com/300x300">
+
+<h3>Hair Mask</h3>
+
+<div class="price">250 SDG</div>
+
+<a class="order" href="https://wa.me/249912969069?text=أريد طلب المنتج: Hair Mask">
+اطلب الآن
+</a>
+
+</div>
+
+</section>
+
+</body>
+</html>
