@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>UNIQUE Hair Shop</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+color:#333;
 }
 
 header{
-    background:#111;
-    padding:20px;
-    text-align:center;
+background:#111;
+padding:20px;
+text-align:center;
 }
 
 .logo{
-    width:150px;
+width:150px;
 }
 
 .container{
-    display:flex;
-    justify-content:center;
-    padding:40px 20px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:40px 20px;
 }
 
 .product-link{
-    text-decoration:none;
-    color:inherit;
-    display:block;
+text-decoration:none;
+color:inherit;
+display:block;
 }
 
 .card{
-    width:340px;
-    background:#fff;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-    transition:.3s;
+width:340px;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+transform:translateY(-5px);
 }
 
 .product-image{
-    width:100%;
-    display:block;
+width:100%;
+display:block;
 }
 
 .content{
-    padding:20px;
-    text-align:center;
+padding:20px;
+text-align:center;
 }
 
 .content h2{
-    margin-bottom:10px;
+margin-bottom:10px;
 }
 
 .content p{
-    color:#666;
-    margin-bottom:10px;
+color:#666;
+margin-bottom:10px;
 }
 
 .price{
-    font-size:24px;
-    color:#d81b60;
-    font-weight:bold;
-    margin:15px 0;
+font-size:24px;
+color:#d81b60;
+font-weight:bold;
+margin:15px 0;
 }
 
 button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#25D366;
-    color:white;
-    font-size:16px;
-    cursor:pointer;
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+background:#25D366;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
 
 button:hover{
-    background:#1ca851;
+background:#1ca851;
 }
+
 </style>
 
 </head>
@@ -99,36 +106,89 @@ button:hover{
 <body>
 
 <header>
-    <img src="1544.jpg" class="logo" alt="UNIQUE Hair Shop">
+
+<img src="1544.jpg" class="logo" alt="UNIQUE Hair Shop">
+
 </header>
 
 <div class="container">
+    <!-- المنتج الأول -->
 
 <a href="fluffy.html" class="product-link">
 
 <div class="card">
 
-    <img src="fluffy-250.jpg" class="product-image" alt="Fluffy Moisturizing Cream">
+<img src="fluffy-250.jpg" class="product-image" alt="Fluffy Moisturizing Cream">
 
-    <div class="content">
+<div class="content">
 
-        <h2>Fluffy Moisturizing Cream</h2>
+<h2>Fluffy Moisturizing Cream</h2>
 
-        <p>الحجم: 250 ML</p>
+<p>الحجم: 250 ML</p>
 
-        <div class="price">
-            400 جنيه مصري
-        </div>
+<div class="price">
+400 جنيه مصري
+</div>
 
-        <button>عرض التفاصيل</button>
+<button>
+عرض التفاصيل
+</button>
 
-    </div>
+</div>
 
 </div>
 
 </a>
 
+<!-- المنتج الثاني -->
+
+<a href="fluffy-spray.html" class="product-link">
+
+<div class="card">
+
+<img src="spray-250.jpg" class="product-image" alt="Fluffy Moisturizing Spray">
+
+<div class="content">
+
+<h2>Fluffy Moisturizing Spray</h2>
+
+<p>الحجم: 250 ML</p>
+
+<div class="price">
+400 جنيه مصري
 </div>
 
+<button>
+عرض التفاصيل
+</button>
+
+</div>
+
+</div>
+
+</a>
+</div>
+
+<footer style="background:#111;color:white;text-align:center;padding:30px 20px;margin-top:40px;">
+
+<h2>UNIQUE Hair Shop</h2>
+
+<p style="margin-top:10px;">
+منتجات أصلية للعناية بالشعر
+</p>
+
+<p style="margin-top:10px;">
+📱 واتساب:
+<a href="https://wa.me/249912969069" style="color:#25D366;text-decoration:none;">
++249 912 969 069
+</a>
+</p>
+
+<p style="margin-top:20px;font-size:14px;color:#ccc;">
+© 2026 UNIQUE Hair Shop. جميع الحقوق محفوظة.
+</p>
+
+</footer>
 </body>
+
 </html>
