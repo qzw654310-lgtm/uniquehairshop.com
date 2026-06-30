@@ -2,10 +2,12 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UNIQUE Hair Shop</title>
+<title>UNIQUE</title>
 
 <style>
 
@@ -13,90 +15,151 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-font-family:Arial,sans-serif;
-background:#f5f5f5;
+background:#f7f7f7;
 color:#333;
 }
 
 header{
-background:#111;
-padding:20px;
+background:linear-gradient(135deg,#d4af37,#f5e7a3);
+padding:50px 20px;
 text-align:center;
+color:white;
 }
 
-.logo{
-width:150px;
+header h1{
+font-size:50px;
+letter-spacing:4px;
+}
+
+header p{
+margin-top:10px;
+font-size:18px;
+}
+
+.shop-btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:white;
+color:#d4af37;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.search-box{
+max-width:700px;
+margin:30px auto;
+padding:0 15px;
+}
+
+.search-box input{
+width:100%;
+padding:15px;
+border-radius:30px;
+border:1px solid #ddd;
+font-size:17px;
+outline:none;
 }
 
 .container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-padding:40px 20px;
-}
-
-.product-link{
-text-decoration:none;
-color:inherit;
-display:block;
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:20px;
 }
 
 .card{
-width:340px;
-background:#fff;
-border-radius:15px;
+background:white;
+border-radius:18px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
-.product-image{
+.card img{
 width:100%;
-display:block;
+height:260px;
+object-fit:cover;
 }
 
 .content{
-padding:20px;
+padding:18px;
 text-align:center;
 }
 
 .content h2{
-margin-bottom:10px;
-}
-
-.content p{
-color:#666;
+font-size:20px;
 margin-bottom:10px;
 }
 
 .price{
 font-size:24px;
-color:#d81b60;
 font-weight:bold;
+color:#009688;
 margin:15px 0;
 }
 
-button{
+.content button{
 width:100%;
-padding:12px;
-border:none;
-border-radius:8px;
-background:#25D366;
+padding:13px;
+background:#d4af37;
 color:white;
-font-size:16px;
+border:none;
+border-radius:10px;
+font-size:17px;
 cursor:pointer;
 }
 
-button:hover{
-background:#1ca851;
+.product-link{
+text-decoration:none;
+color:inherit;
+}
+
+footer{
+margin-top:50px;
+background:#222;
+color:white;
+padding:30px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+left:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+text-decoration:none;
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:36px;
+}
+
+.card img{
+height:220px;
+}
+
 }
 
 </style>
@@ -107,288 +170,250 @@ background:#1ca851;
 
 <header>
 
-<img src="1544.jpg" class="logo" alt="UNIQUE Hair Shop">
+<h1>UNIQUE</h1>
+
+<p>Premium Hair Care Products</p>
+
+<a href="#products" class="shop-btn">
+تسوق الآن
+</a>
 
 </header>
 
-<div class="container">
+<div class="search-box">
+
+<input
+type="text"
+placeholder="🔍 ابحث عن منتج...">
+
+</div>
+
+<div class="container" id="products">
     <!-- المنتج الأول -->
-
-<a href="fluffy.html" class="product-link">
-
-<div class="card">
-
-<img src="fluffy-250.jpg" class="product-image" alt="Fluffy Moisturizing Cream">
-
+<a href="product1.html" class="product-link">
+<div class="card" data-category="mask">
+<img src="product1.jpg" alt="Product 1">
 <div class="content">
-
-<h2>Fluffy Moisturizing Cream</h2>
-
-<p>الحجم: 250 ML</p>
-
-<div class="price">
-400 جنيه مصري
+<h2>المنتج الأول</h2>
+<p>الحجم: 300 ML</p>
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
 
 <!-- المنتج الثاني -->
-
-<a href="fluffy-spray.html" class="product-link">
-
-<div class="card">
-
-<img src="spray-250.jpg" class="product-image" alt="Fluffy Moisturizing Spray">
-
+<a href="product2.html" class="product-link">
+<div class="card" data-category="mask">
+<img src="product2.jpg" alt="Product 2">
 <div class="content">
-
-<h2>Fluffy Moisturizing Spray</h2>
-
-<p>الحجم: 250 ML</p>
-
-<div class="price">
-400 جنيه مصري
+<h2>المنتج الثاني</h2>
+<p>الحجم: 300 ML</p>
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
-</a>
-</div>
-
-    <!-- المنتج الثالث -->
-
-<a href="honey-hair-mask.html" class="product-link">
-
-<div class="card">
-
-<img src="honey-hair-mask-300.jpg" class="product-image" alt="Honey Hair Mask">
-
-<div class="content">
-
-<h2>Honey Hair Mask</h2>
-
-<p>ماسك العسل - 300 ML</p>
-
-<div class="price">
-370 جنيه مصري
-</div>
-
-<button>
-عرض التفاصيل
-</button>
-
-</div>
-
-</div>
-
 </a>
 
-    <!-- المنتج الرابع -->
+<!-- المنتج الثالث -->
+<a href="product3.html" class="product-link">
+<div class="card" data-category="mask">
+<img src="product3.jpg" alt="Product 3">
+<div class="content">
+<h2>المنتج الثالث</h2>
+<p>الحجم: 300 ML</p>
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
+</div>
+</div>
+</a>
+
+<!-- المنتج الرابع -->
 <a href="repair-mask.html" class="product-link">
-    <div class="card">
-
-        <img src="repair-mask-300.jpg"
-             class="product-image"
-             alt="Repair Hair Mask with Argan Oil">
-
-        <div class="content">
-
-            <h2>Repair Hair Mask with Argan Oil</h2>
-
-            <p>الحجم: 300 ML</p>
-
-            <div class="price">
-                370 جنيه مصري
-            </div>
-
-            <button>
-                عرض التفاصيل
-            </button>
-
-        </div>
-
-    </div>
+<div class="card" data-category="mask">
+<img src="repair-mask-300.jpg" alt="Repair Hair Mask with Argan Oil">
+<div class="content">
+<h2>Repair Hair Mask with Argan Oil</h2>
+<p>الحجم: 300 ML</p>
+<div class="price">370 جنيه مصري</div>
+<button>عرض التفاصيل</button>
+</div>
+</div>
 </a>
 
-    <!-- المنتج الخامس -->
+<!-- المنتج الخامس -->
 <a href="repair-mask-strawberry.html" class="product-link">
-
-<div class="card">
-
-<img src="repair-mask-strawberry-300.jpg"
-class="product-image"
-alt="Repair Mask with Strawberries">
-
+<div class="card" data-category="mask">
+<img src="repair-mask-strawberry-300.jpg" alt="Repair Mask with Strawberries">
 <div class="content">
-
 <h2>Repair Mask with Strawberries</h2>
-
 <p>الحجم: 300 ML</p>
-
-<div class="price">
-350 جنيه مصري
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
 
-    <!-- المنتج السادس -->
+<!-- المنتج السادس -->
 <a href="repair-mask-sandalwood.html" class="product-link">
-
-<div class="card">
-
-<img src="repair-mask-sandalwood-300.jpg"
-class="product-image"
-alt="Repair Mask with Sandalwood">
-
+<div class="card" data-category="mask">
+<img src="repair-mask-sandalwood-300.jpg" alt="Repair Mask with Sandalwood">
 <div class="content">
-
 <h2>Repair Mask with Sandalwood</h2>
-
 <p>الحجم: 300 ML</p>
-
-<div class="price">
-350 جنيه مصري
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
 
-    <!-- المنتج السابع -->
+<!-- المنتج السابع -->
 <a href="repair-mask-chocolate.html" class="product-link">
-
-<div class="card">
-
-<img src="repair-mask-chocolate-300.jpg"
-class="product-image"
-alt="Repair Mask with Cocoa Butter">
-
+<div class="card" data-category="mask">
+<img src="repair-mask-chocolate-300.jpg" alt="Repair Mask Chocolate">
 <div class="content">
-
-<h2>Repair Mask with Cocoa Butter & Chocolate Flavour</h2>
-
+<h2>Repair Mask Chocolate</h2>
 <p>الحجم: 300 ML</p>
-
-<div class="price">
-350 جنيه مصري
+<div class="price">350 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
 
-    <!-- المنتج الثامن -->
+<!-- المنتج الثامن -->
 <a href="unique-herbal-oil-100.html" class="product-link">
-
-<div class="card">
-
-<img src="unique-herbal-oil-100.jpg"
-class="product-image"
-alt="Unique Herbal Oil">
-
+<div class="card" data-category="oil">
+<img src="unique-herbal-oil-100.jpg" alt="Unique Herbal Oil">
 <div class="content">
-
 <h2>Unique Herbal Oil</h2>
-
 <p>الحجم: 100 ML</p>
-
-<div class="price">
-250 جنيه مصري
+<div class="price">250 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
 
-    <!-- المنتج التاسع -->
+<!-- المنتج التاسع -->
 <a href="unique-serum-50.html" class="product-link">
-
-<div class="card">
-
-<img src="unique-serum-50.jpg"
-class="product-image"
-alt="Unique Serum">
-
+<div class="card" data-category="serum">
+<img src="unique-serum-50.jpg" alt="Unique Serum">
 <div class="content">
-
 <h2>Unique Serum</h2>
-
 <p>الحجم: 50 ML</p>
-
-<div class="price">
-200 جنيه مصري
+<div class="price">200 جنيه مصري</div>
+<button>عرض التفاصيل</button>
 </div>
-
-<button>
-عرض التفاصيل
-</button>
-
 </div>
-
-</div>
-
 </a>
-    
-<footer style="background:#111;color:white;text-align:center;padding:30px 20px;margin-top:40px;">
+</div>
 
-<h2>UNIQUE Hair Shop</h2>
+<footer>
+
+<h2>UNIQUE</h2>
+
+<p>Premium Hair Care Products</p>
 
 <p style="margin-top:10px;">
-منتجات أصلية للعناية بالشعر
-</p>
-
-<p style="margin-top:10px;">
-📱 واتساب:
-<a href="https://wa.me/249912969069" style="color:#25D366;text-decoration:none;">
-+249 912 969 069
-</a>
-</p>
-
-<p style="margin-top:20px;font-size:14px;color:#ccc;">
-© 2026 UNIQUE Hair Shop. جميع الحقوق محفوظة.
+جميع الحقوق محفوظة © 2026
 </p>
 
 </footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/201002271677"
+target="_blank">
+💬
+</a>
+
+<script>
+
+const searchInput = document.querySelector(".search-box input");
+
+const cards = document.querySelectorAll(".card");
+
+searchInput.addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+cards.forEach(function(card){
+
+let text = card.innerText.toLowerCase();
+
+if(text.includes(value)){
+
+card.parentElement.style.display="block";
+
+}else{
+
+card.parentElement.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
 </body>
 
+</html>
+<footer>
+
+<h2>UNIQUE</h2>
+
+<p>Premium Hair Care Products</p>
+
+<p style="margin-top:10px;">
+واتساب: 01002271677
+</p>
+
+<p style="margin-top:8px;">
+© 2026 UNIQUE - جميع الحقوق محفوظة
+</p>
+
+</footer>
+
+<a
+href="https://wa.me/201002271677"
+class="whatsapp"
+target="_blank"
+title="تواصل عبر واتساب">
+💬
+</a>
+
+<script>
+
+// البحث
+
+const searchInput = document.querySelector(".search-box input");
+
+const products = document.querySelectorAll(".product-link");
+
+searchInput.addEventListener("keyup", function(){
+
+let value = this.value.toLowerCase();
+
+products.forEach(function(product){
+
+let text = product.innerText.toLowerCase();
+
+if(text.indexOf(value)>-1){
+
+product.style.display="block";
+
+}else{
+
+product.style.display="none";
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
 </html>
