@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unique Serum 50 ML</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f7f7f7;
+}
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:20px;
+}
+img{
+width:100%;
+border-radius:15px;
+}
+.price{
+font-size:28px;
+color:#8e24aa;
+font-weight:bold;
+margin:15px 0;
+}
+.qty{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+margin:20px 0;
+}
+.qty button{
+width:40px;
+height:40px;
+font-size:22px;
+cursor:pointer;
+}
+.total{
+font-size:22px;
+font-weight:bold;
+margin:20px 0;
+}
+.order{
+display:block;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px;
+text-align:center;
+font-size:20px;
+border-radius:10px;
+margin-top:20px;
+}
+.back{
+display:block;
+background:#333;
+color:white;
+text-decoration:none;
+padding:12px;
+text-align:center;
+border-radius:10px;
+margin-top:15px;
+}
+.section{
+margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="unique-serum-50.jpg" alt="Unique Serum">
+
+<h1>Unique Serum</h1>
+
+<p><strong>الحجم:</strong> 50 ML</p>
+
+<div class="price">
+200 جنيه مصري
+</div>
+
+<div class="qty">
+<button onclick="minus()">-</button>
+<span id="quantity">1</span>
+<button onclick="plus()">+</button>
+</div>
+
+<div class="total">
+الإجمالي:
+<span id="total">200</span>
+جنيه
+</div>
+
+<a id="whatsapp" class="order" target="_blank">
+اطلب عبر واتساب
+</a>
+
+<div class="section">
+<h2>فوائد المنتج</h2>
+<ul>
+<li>يمنح الشعر لمعانًا طبيعيًا.</li>
+<li>يقلل الهيشان والتطاير.</li>
+<li>يساعد على تنعيم الشعر.</li>
+<li>يحمي أطراف الشعر من التقصف.</li>
+<li>خفيف على الشعر ولا يترك ملمسًا دهنيًا.</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>طريقة الاستخدام</h2>
+<p>
+ضع كمية صغيرة على الشعر الرطب أو الجاف، مع التركيز على الأطراف، ثم صفف الشعر كالمعتاد.
+</p>
+</div>
+
+<a href="index.html" class="back">
+العودة للرئيسية
+</a>
+
+</div>
+
+<script>
+
+let price=200;
+let quantity=1;
+
+function update(){
+
+document.getElementById("quantity").innerHTML=quantity;
+document.getElementById("total").innerHTML=price*quantity;
+
+let message=`السلام عليكم، أريد طلب:
+
+Unique Serum 50 ML
+
+الكمية: ${quantity}
+
+الإجمالي: ${price*quantity} جنيه`;
+
+document.getElementById("whatsapp").href=
+"https://wa.me/201002271677?text="+encodeURIComponent(message);
+
+}
+
+function plus(){
+quantity++;
+update();
+}
+
+function minus(){
+if(quantity>1){
+quantity--;
+update();
+}
+}
+
+update();
+
+</script>
+
+</body>
+</html>
