@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repair Mask with Sandalwood</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f7f7f7;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:20px;
+}
+
+img{
+width:100%;
+border-radius:15px;
+}
+
+.price{
+font-size:28px;
+color:#8b5a2b;
+font-weight:bold;
+margin:15px 0;
+}
+
+.qty{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:15px;
+margin:20px 0;
+}
+
+.qty button{
+width:40px;
+height:40px;
+font-size:22px;
+cursor:pointer;
+}
+
+.total{
+font-size:22px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.order{
+display:block;
+background:#25D366;
+color:white;
+text-decoration:none;
+padding:15px;
+text-align:center;
+font-size:20px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.back{
+display:block;
+background:#333;
+color:#fff;
+text-decoration:none;
+padding:12px;
+text-align:center;
+border-radius:10px;
+margin-top:15px;
+}
+
+.section{
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="repair-mask-sandalwood-300.jpg" alt="Repair Mask with Sandalwood">
+
+<h1>Repair Mask with Sandalwood</h1>
+
+<p><strong>الحجم:</strong> 300 ML</p>
+
+<div class="price">
+350 جنيه مصري
+</div>
+
+<div class="qty">
+<button onclick="minus()">-</button>
+<span id="quantity">1</span>
+<button onclick="plus()">+</button>
+</div>
+
+<div class="total">
+الإجمالي:
+<span id="total">350</span>
+جنيه
+</div>
+
+<a id="whatsapp" class="order" target="_blank">
+اطلب عبر واتساب
+</a>
+
+<div class="section">
+<h2>فوائد المنتج</h2>
+
+<ul>
+<li>يغذي الشعر بعمق.</li>
+<li>يساعد على إصلاح الشعر التالف.</li>
+<li>يقلل التقصف والهيشان.</li>
+<li>يمنح الشعر نعومة ولمعانًا.</li>
+<li>برائحة خشب الصندل الهادئة.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>طريقة الاستخدام</h2>
+
+<p>
+يوضع على الشعر بعد غسله بالشامبو لمدة 5 إلى 10 دقائق ثم يُشطف بالماء.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>آراء العملاء</h2>
+
+⭐⭐⭐⭐⭐
+
+<p>رائحة جميلة ونتيجة ممتازة.</p>
+
+<p>الشعر أصبح أكثر نعومة ولمعانًا.</p>
+
+</div>
+
+<a href="index.html" class="back">
+العودة للرئيسية
+</a>
+
+</div>
+
+<script>
+
+let price=350;
+let quantity=1;
+
+function update(){
+
+document.getElementById("quantity").innerHTML=quantity;
+document.getElementById("total").innerHTML=price*quantity;
+
+let message=`السلام عليكم، أريد طلب:
+
+Repair Mask with Sandalwood
+
+الكمية: ${quantity}
+
+الإجمالي: ${price*quantity} جنيه`;
+
+document.getElementById("whatsapp").href="https://wa.me/201002271677?text="+encodeURIComponent(message);
+
+}
+
+function plus(){
+quantity++;
+update();
+}
+
+function minus(){
+if(quantity>1){
+quantity--;
+update();
+}
+}
+
+update();
+
+</script>
+
+</body>
+</html>
