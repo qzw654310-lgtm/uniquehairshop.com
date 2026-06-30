@@ -18,11 +18,62 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
 
+  .navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#b8860b;
+}
+
+.navbar ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+.navbar a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+transition:.3s;
+}
+
+.navbar a:hover{
+color:#b8860b;
+}
+  
 body{
 background:#f7f7f7;
 color:#333;
 }
 
+  <nav class="navbar">
+
+<div class="logo">UNIQUE</div>
+
+<ul>
+
+<li><a href="index.html">الرئيسية</a></li>
+
+<li><a href="#products">المنتجات</a></li>
+
+<li><a href="https://wa.me/249912969069" target="_blank">تواصل معنا</a></li>
+
+</ul>
+
+</nav>
+  
 header{
 background:linear-gradient(135deg,#d4af37,#f7e6a0,#ffffff);
 padding:70px 20px;
@@ -104,11 +155,36 @@ padding:18px;
 text-align:center;
 }
 
+.badge{
+position:absolute;
+top:12px;
+right:12px;
+background:linear-gradient(135deg,#d4af37,#b8860b);
+color:white;
+padding:7px 14px;
+border-radius:25px;
+font-size:12px;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+z-index:2;
+}
+
+.card{
+position:relative;
+}
+  
 .content h2{
 font-size:20px;
 margin-bottom:10px;
 }
 
+  .rating{
+color:#f5b301;
+font-size:18px;
+margin:8px 0;
+letter-spacing:2px;
+}
+  
 .price{
 font-size:24px;
 font-weight:bold;
@@ -119,14 +195,20 @@ margin:15px 0;
 .content button{
 width:100%;
 padding:13px;
-background:#d4af37;
+background:linear-gradient(135deg,#d4af37,#b8860b);
 color:white;
 border:none;
-border-radius:10px;
+border-radius:12px;
 font-size:17px;
+font-weight:bold;
 cursor:pointer;
+transition:all .3s ease;
 }
-
+.content button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+  
 .product-link{
 text-decoration:none;
 color:inherit;
@@ -200,6 +282,8 @@ placeholder="🔍 ابحث عن منتج...">
 
 <div class="card" data-category="cream">
 
+<div class="badge">الأكثر مبيعًا</div>
+
 <img src="fluffy-250.jpg"
 class="product-image"
 alt="Fluffy Moisturizing Cream">
@@ -207,6 +291,10 @@ alt="Fluffy Moisturizing Cream">
 <div class="content">
 
 <h2>Fluffy Moisturizing Cream</h2>
+
+<div class="rating">
+⭐⭐⭐⭐⭐
+</div>
 
 <p>الحجم: 250 ML</p>
 
