@@ -170,3 +170,181 @@ border-radius:10px;
 400 جنيه مصري
 
 </div>
+<h3>الكمية</h3>
+
+<div class="qty-box">
+
+<button onclick="decrease()">-</button>
+
+<span id="qty">1</span>
+
+<button onclick="increase()">+</button>
+
+</div>
+
+<h2>
+
+الإجمالي:
+
+<span id="total">400</span>
+
+جنيه
+
+</h2>
+
+<button class="order-btn" onclick="orderNow()">
+
+🛒 اطلب الآن
+
+</button>
+
+<div class="section">
+
+<h2>⭐ فوائد المنتج</h2>
+
+<ul>
+
+<li>✔ ترطيب وتنعيم الشعر.</li>
+
+<li>✔ فك التشابك وتسهيل التسليك.</li>
+
+<li>✔ تغذية الشعر.</li>
+
+<li>✔ تقليل تساقط الشعر.</li>
+
+<li>✔ نمو الفراغات والبيبي هير.</li>
+
+<li>✔ قوام مائي سريع الامتصاص.</li>
+
+<li>✔ ترطيب الشعر لأطول فترة ممكنة.</li>
+
+<li>✔ يساعد على تكثيف مقدمة الشعر (Baby Hair).</li>
+
+<li>✔ يطول ويكثف الشعر مع الاستمرار.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>📖 طريقة الاستخدام</h2>
+
+<p>
+
+رش البخاخ مباشرة على فروة الرأس لتحفيز نمو الشعر، ثم رش كمية مناسبة على الشعر بعد تقسيمه حتى يصبح الشعر رطبًا وسهل التسليك.
+
+يستخدم بانتظام للحصول على أفضل النتائج.
+
+</p>
+
+</div>
+<div class="section">
+
+<h2>⭐ تقييم المنتج</h2>
+
+<div style="font-size:30px;color:#FFD700;">
+★★★★★
+</div>
+
+<p style="font-size:22px;margin-top:10px;">
+4.9 / 5
+</p>
+
+<p>
+بناءً على 128 تقييم.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>💬 آراء العملاء</h2>
+
+<div class="review">
+<b>⭐⭐⭐⭐⭐ سارة</b>
+<p>
+أصبح شعري أكثر نعومة وسهل التصفيف من أول استخدام.
+</p>
+</div>
+
+<div class="review">
+<b>⭐⭐⭐⭐⭐ آمنة</b>
+<p>
+البخاخ خفيف على الشعر ويرطبه لفترة طويلة، وأنصح به.
+</p>
+</div>
+
+<div class="review">
+<b>⭐⭐⭐⭐⭐ محمد</b>
+<p>
+لاحظت فرقًا في ترطيب الشعر وتقليل الهيشان مع الاستمرار.
+</p>
+</div>
+
+</div>
+
+<a href="index.html" class="back-btn">
+
+⬅ العودة إلى الصفحة الرئيسية
+
+</a>
+
+</div>
+
+</div>
+<script>
+
+let quantity = 1;
+const price = 400;
+
+function update(){
+document.getElementById("qty").innerHTML = quantity;
+document.getElementById("total").innerHTML = quantity * price;
+}
+
+function increase(){
+quantity++;
+update();
+}
+
+function decrease(){
+if(quantity > 1){
+quantity--;
+update();
+}
+}
+
+function orderNow(){
+
+let message =
+`السلام عليكم،
+
+أريد طلب المنتج:
+
+Fluffy Moisturizing Spray
+
+الحجم: 250 ML
+
+الكمية: ${quantity} عبوة
+
+سعر العبوة: 400 جنيه مصري
+
+الإجمالي: ${quantity * price} جنيه مصري
+
+شكراً.`;
+
+window.open(
+"https://wa.me/249912969069?text=" + encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+update();
+
+</script>
+
+</body>
+
+</html>
